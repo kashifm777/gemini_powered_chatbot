@@ -5,8 +5,8 @@ import google.generativeai as ggi
 
 load_dotenv(".env")
 
-fetcheed_api_key = os.getenv("GOOGLE_API_KEY")
-ggi.configure(api_key = fetcheed_api_key)
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+ggi.configure(api_key = GOOGLE_API_KEY)
 
 model = ggi.GenerativeModel("gemini-pro") 
 chat = model.start_chat()
